@@ -41,25 +41,30 @@ public abstract class earth implements vehicle {
     public class tram extends earth {
         @Override
         public void energy() {
-            System.out.print("Электричество");
+            System.out.println("Электричество");
         }
 
         @Override
         public void movementPrinciple() {
-            // super.movementPrinciple();
-            System.out.print("Передвигается по рельсам");
+            System.out.println("Передвигается по рельсам");
         }
 
         @Override
         public void capacity() {
             System.out.println("Вместимость 50 человек");
         }
-    }
+        public  class metro extends tram {
+            @Override
+            public void movementPlace() {
+                System.out.println("Передвигаются под землей");
+            }
 
-    public class metro extends tram {
-        @Override
-        public void energy() {
-            super.energy();
+            @Override
+            public void capacity() {
+                System.out.println("Вместимость 500 человек");
+            }
         }
     }
+
+
 }
